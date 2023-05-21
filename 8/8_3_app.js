@@ -4,10 +4,10 @@ const amISexy = new Promise((resolve, reject) => {
     setTimeout(reject, 3000, "Yes you are!");
 });
 
-const thenFn = value => console.log(value);
+// const thenFn = value => console.log(value);
 
 // amISexy.then(value => console.log(value));
 // amISexy.then(thenFn); 
 amISexy
-    .then(result => console.log(value))
-    .catch(error => console.log(value));
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
