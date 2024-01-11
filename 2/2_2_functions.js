@@ -1,16 +1,34 @@
-const email = ["sud@no.com", "google@naver.com", "hyeon@gmail.com", "ssu@gmail.com", "nico@nomad.com"];
+// find method
+// const email = [
+//   "sud@no.com",
+//   "naver@google.com",
+//   "hyeon@gmail.com",
+//   "nico@nomad.com",
+//   "ssu@gmail.com",
+// ];
 
-// const foundMail = email.find(item => item.includes("@gmail.com"));
-// // const foundMail = email.find(item => true);
-// console.log(foundMail);
+// const foundMail = email.find(item => true);
+// console.log(foundMail); // sud@no.com
 
-// const noGmail = email.filter(gmail => !gmail.includes("@gmail.com"));
+// const foundMail = email.find((item) => item.includes("@gmail.com"));
+// console.log(foundMail); // hyeon@gmail.com
+
+const emails = [
+  "sud@no.com",
+  "naver@google.com",
+  "hyeon@gmail.com",
+  "nico@nomad.com",
+  "ssu@gmail.com",
+];
+
+// filter method
+// const noGmail = emails.filter((gmail) => !gmail.includes("@gmail.com"));
 // console.log(noGmail);
 
-// email.forEach(mail => {
-//     console.log(mail.split("@")[0]);
-// }
-// );
+// forEach method
+// emails.forEach((email) => {
+//   console.log(email.split("@")[0]);
+// });
 
 // const name = "nicolas serrano"
 // name.split(" ");
@@ -18,17 +36,16 @@ const email = ["sud@no.com", "google@naver.com", "hyeon@gmail.com", "ssu@gmail.c
 // name.split("rr");
 
 // const cleaned = [];
-// email.forEach(mail => {
-//     cleaned.push(mail.split("@")[0]);
+// emails.forEach((email) => {
+//   cleaned.push(email.split("@")[0]);
 // });
-
 // console.log(cleaned);
 
-// const cleaned = email.map(mail => mail.split("@")[0]);
+// const cleaned = emails.map((mail) => mail.split("@")[0]);
 // console.log(cleaned);
 
-const cleaned = email.map((mail, index) => ({
-    username: mail.split("@")[0], 
-    points: index
+const cleaned = emails.map((mail, index) => ({
+  username: mail.split("@")[0],
+  points: index,
 }));
 console.table(cleaned);
