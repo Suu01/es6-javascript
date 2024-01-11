@@ -1,62 +1,76 @@
-var myName = "suudel";
-console.log(myName);
+// 1. Let and Const
+const person = {
+  name: "Suudel",
+};
+// person = true; // error
+person.name = "Nicolas";
 
-console.log(myName);
+let suu = "del";
+suu = "lalala";
+
+var myName = "Suudel";
+console.log(myName); // Suudel
+
+console.log(myName); // undefined
 var myName = "suudel";
 
+// 2. Temporal Dead Zone
+// 내부 작동
 var myName;
-console.log(myName);
+console.log(myName); //undefined
 myName = "suudel";
 
 console.log(myName);
-let myName = "suudel";
+let myName = "suudel"; // error
 
-if(true) {
-    const hello = "hi";
+// 3. Block Scope
+if (true) {
+  const hello = "hi";
+  let hi = "hello";
 }
-console.log(hello);
+console.log(hello); // error
 
-if(true) {
-    var hello = "hi";
+if (true) {
+  var hello = "hi";
 }
 console.log(hello);
 
 function auto() {
-    var hello = "hi"
+  var hello = "hi";
 }
-console.log(hello);
+console.log(hello); // error
 
-if(true) {
-    let hello = "hi";
+if (true) {
+  let hello = "hi";
 }
 let hello = "bye";
-console.log(bye);
+console.log(hello);
 
 let hello = "hi";
-if(true) {
-    console.log(hello);
+if (true) {
+  console.log(hello);
 }
 console.log(hello);
 
 let hello = "hi";
-if(true) {
-    console.log(hello);
-    const a = "a";
+if (true) {
+  console.log(hello);
+  const a = "a";
 }
-console.log(a);
+console.log(a); // error
 
 let hello;
 if (true) {
-    hello = "lalala";
+  hello = "lalala";
 }
 console.log(hello);
 
 let hello;
 if (true) {
+  /////
+  if (true) {
     /////
-    if(true) {
-        /////
-    }
-    hello = "lalala";
+  }
+  hello = "lalala";
 }
 console.log(hello);
