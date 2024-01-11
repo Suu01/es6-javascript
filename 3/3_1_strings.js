@@ -1,5 +1,5 @@
+// Template literal
 // const sayHi = (aName = "anon") => "Hello " + aName + " lovely to have you";
-
 const sayHi = (aName = "anon") => `Hello ${aName} lovely to have you`;
 console.log(sayHi());
 
