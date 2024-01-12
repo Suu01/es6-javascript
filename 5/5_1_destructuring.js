@@ -1,78 +1,70 @@
 // const settings = {
-//     notifications: {
-//         follow: true,
-//         alerts: true,
-//         unfollow: false
-//     },
-//     color: {
-//         theme: "dark"
-//     }
+//   notifications: {
+//     follow: true,
+//     alerts: true,
+//     unfollow: false,
+//   },
+//   color: {
+//     theme: "dark",
+//   },
 // };
 
-// if(settings.notifications.follow) {
-//     // send email - 옛날 방식
+// 옛날 방식
+// if (settings.notifications.follow) {
+//   // send email
 // }
 
 // const {
-//     notifications: { follow },
-//     color
+//   notifications: { follow },
+//   color,
 // } = settings;
 // console.log(follow);
 // console.log(color);
 
-// const {
-//     notifications
-// } = settings;
-// console.log(notifications);
 // const notifications = settings.notifications;
 
-
-
-
-
-
-// const settings = {
-//     notifications: {
-//         follow: true,
-//         alerts: true,
-//         unfollow: false
-//     },
-//     color: {
-//         theme: "dark"
-//     }
-// };
+// const { notifications } = settings;
+// console.log(notifications);
 
 // const {
-//     notifications: { follow }
+//   notifications: { follow },
 // } = settings;
-
-// console.log(notifications);
+// // console.log(notifications);
 // console.log(follow);
 
 // const settings = {
-//     notifications: {
-//         alerts: true,
-//         unfollow: false
-//     },
-//     color: {
-//         theme: "dark"
-//     }
+//   notifications: {
+//     alerts: true,
+//     unfollow: false,
+//   },
+//   color: {
+//     theme: "dark",
+//   },
 // };
+
 // const {
-//     notifications: { follow = false }
+//   notifications: { follow },
+// } = settings;
+// console.log(follow); // undefined
+
+// const {
+//   notifications: { follow = false },
 // } = settings;
 // console.log(follow);
 
 const settings = {
-    color: {
-        theme: "dark"
-    }
+  color: {
+    theme: "dark",
+  },
 };
-// const {
-//     notifications: { follow = false } = {}
-// } = settings;
+
+// const { notifications: { follow = false } = {} } = settings;
 // console.log(follow);
+
+// const { color } = settings;
+// console.log(color);
+
 const {
-    color: { theme = "light" }
+  color: { theme = "light" },
 } = settings;
 console.log(theme);
